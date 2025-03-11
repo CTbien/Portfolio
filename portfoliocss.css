@@ -250,3 +250,30 @@ footer {
     font-size: 1.1em;
     line-height: 1.5;
 }
+
+.ecole-section {
+    padding: 2em 0;
+    text-align: center;
+    color: #333;
+   
+}
+.ecole-section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #000;
+}
+
+.veille-section {
+    padding: 2em 0;
+    text-align: center;
+    color: #333;
+    background-color: #f9f9f9;
+}
+.veille-section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #000;
+   
+}
+
+
