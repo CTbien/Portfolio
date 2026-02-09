@@ -1,0 +1,546 @@
+/* =========================================
+   1. BASE & DESIGN GÉNÉRAL
+   ========================================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; /* Fond gris foncé uni */
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* =========================================
+   2. NAVIGATION DU HAUT (Invisible/Flottante)
+   ========================================= */
+header {
+    position: absolute; /* Flotte au-dessus du contenu */
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: flex-end; /* Pousse les liens à droite */
+    background: transparent;
+    z-index: 10;
+}
+
+header nav a {
+    margin-left: 30px;
+    font-size: 1rem;
+    color: #888; /* Gris discret */
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #4facfe; /* Bleu au survol */
+}
+
+/* =========================================
+   3. SECTION ACCUEIL (HERO)
+   ========================================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    gap: 60px;
+}
+
+/* Texte à gauche */
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: #4facfe;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    color: #888;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* Boutons Sociaux */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-social {
+    padding: 8px 20px;
+    border: 1px solid #4facfe;
+    color: #4facfe;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.btn-social:hover {
+    background-color: #4facfe;
+    color: white;
+}
+
+/* Image à droite */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #333;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.02);
+    border-color: #4facfe;
+}
+
+/* =========================================
+   4. AUTRES SECTIONS
+   ========================================= */
+.container {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #f0f0f0;
+    border-left: 4px solid #4facfe;
+    padding-left: 15px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #202020;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #4facfe;
+}
+
+.tag {
+    font-size: 0.75rem;
+    background-color: #2a2a2a;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    color: #888;
+    display: inline-block;
+    margin-top: 15px;
+    border: 1px solid #333;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   5. RESPONSIVE (MOBILE)
+   ========================================= */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+        padding-top: 60px;
+    }
+    .hero-text { text-align: center; }
+    .hero-text p { margin: 0 auto 30px auto; }
+    .social-buttons { justify-content: center; }
+    .profile-pic { width: 220px; height: 220px; }
+    
+    header { justify-content: center; padding: 20px; }
+}
+
+/* --- AJOUTS POUR LES NOUVELLES SECTIONS --- */
+
+/* 1. Style pour la section Formation */
+.formation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.info-box h3 {
+    color: #4facfe;
+    margin-bottom: 15px;
+}
+
+.timeline {
+    list-style: none;
+    border-left: 2px solid #333;
+    padding-left: 20px;
+}
+
+.timeline li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #4facfe;
+    border-radius: 50%;
+}
+
+/* 2. Style pour les Compétences */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-item {
+    background: #2a2a2a;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #333;
+    color: #fff;
+    font-weight: 500;
+}
+
+.skill-item:hover {
+    border-color: #4facfe;
+    background: #202020;
+}
+
+/* 3. Ajustement Projets (Boutons + Procédures) */
+.btn-small {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #4facfe;
+    text-decoration: underline;
+}
+
+.procedure-card {
+    border-left: 4px solid #febb1b; /* Couleur différente pour distinguer procédure */
+}
+
+/* 4. Espace Documentaire (Grille de téléchargement) */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.doc-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #202020;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-align: center;
+    gap: 10px;
+}
+
+.doc-card .icon {
+    font-size: 2rem;
+}
+
+.doc-card:hover {
+    border-color: #4facfe;
+    transform: translateY(-5px);
+    background: #252525;
+}
+
+.doc-card.special {
+    border-color: #444;
+}
+
+/* 5. Contact Wrapper */
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.contact-wrapper > div {
+    flex: 1;
+}
+
+.link-text {
+    color: #4facfe;
+    font-weight: bold;
+}
+
+/* RESPONSIVE AJOUTS */
+@media (max-width: 768px) {
+    .formation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Style spécifique pour la carte Contact */
+.doc-card.contact-card {
+    background-color: rgba(79, 172, 254, 0.1); /* Fond légèrement bleu */
+    border-color: #4facfe;
+    grid-column: span 1; /* S'adapte à la grille */
+}
+
+.doc-card.contact-card:hover {
+    background-color: #4facfe;
+    color: white;
+}
+
+.doc-card.contact-card .sub-text {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+/* Optionnel : Si tu veux que le bouton contact prenne 2 colonnes sur grand écran */
+@media (min-width: 768px) {
+    .doc-card.contact-card {
+        grid-column: span 2; 
+    }
+}
+
+
+
+/* --- STYLE DES CASES COMPÉTENCES AVEC LOGOS --- */
+
+.tech-grid {
+    display: flex; /* Aligne les cases côte à côte */
+    justify-content: center; /* Centre le tout */
+    flex-wrap: wrap; /* Passe à la ligne si écran trop petit */
+    gap: 30px; /* Espace entre les cases */
+}
+
+.tech-card {
+    background-color: #252525; /* Fond gris foncé */
+    width: 140px; /* Largeur de la case */
+    height: 140px; /* Hauteur de la case */
+    border-radius: 15px; /* Coins arrondis */
+    display: flex;
+    flex-direction: column; /* Met le logo au-dessus du texte */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    border: 1px solid #333; /* Bordure discrète */
+    transition: all 0.3s ease; /* Animation fluide */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Style de l'icône (le logo) */
+.tech-card i {
+    font-size: 3.5rem; /* Taille du logo (environ 56px) */
+    margin-bottom: 15px; /* Espace entre logo et texte */
+}
+
+/* Style du texte sous le logo */
+.tech-card span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+/* Effet quand on passe la souris dessus */
+.tech-card:hover {
+    transform: translateY(-5px); /* La case remonte un peu */
+    border-color: #4facfe; /* Bordure devient bleue */
+    background-color: #2a2a2a; /* Fond s'éclaircit légèrement */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Ombre plus marquée */
+}
+
+/* Petit ajustement pour mobile */
+@media (max-width: 600px) {
+    .tech-card {
+        width: 110px;
+        height: 110px;
+    }
+    .tech-card i {
+        font-size: 2.5rem;
+    }
+}
+/* --- SECTION VEILLE TECHNOLOGIQUE --- */
+
+.veille-intro {
+    background-color: #202020;
+    padding: 20px;
+    border-left: 4px solid #4facfe;
+    margin-bottom: 30px;
+    border-radius: 0 8px 8px 0;
+}
+
+.veille-intro h3 {
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.veille-intro p {
+    color: #ccc;
+}
+
+/* Grille des articles */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.article-card {
+    background-color: #252525;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    border-color: #4facfe;
+}
+
+.article-card .date {
+    font-size: 0.8rem;
+    color: #4facfe;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.article-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.article-card p {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    align-self: flex-start;
+}
+
+.read-more:hover {
+    color: #4facfe;
+}
+
+/* Liste des outils en bas */
+.tools-container {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.tools-container h4 {
+    margin-bottom: 15px;
+    color: #888;
+}
+
+.tools-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tool-badge {
+    background: #1a1a1a;
+    border: 1px solid #444;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+/* --- LE FOND NOIR & L'ANIMATION --- */
+.hero {
+    position: relative;
+    background-color: #1a1a1a; /* Fond NOIR pur */
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Derrière le texte */
+}
+
+.content-front {
+    position: relative;
+    z-index: 2; /* Devant l'animation */
+}
