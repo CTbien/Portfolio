@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio de Développeur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#formation">Formation</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#veille">Veille</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div id="particles-js"></div>
+
+        <div class="hero-container content-front">
+            <div class="hero-text">
+                <h1>Clément <span class="highlight">Blanic</span></h1>
+                <h2>Étudiant en BTS SIO</h2>
+                <p>
+                    Passionné par le développement et les solutions logicielles. 
+                    Actuellement en formation au Campus Saint Aspais.
+                </p>
+                <div class="social-buttons">
+                    <a href="https://github.com/CTbien" target="_blank" class="btn-social">GitHub</a>
+                    <a href="https://www.linkedin.com/in/cl%C3%A9ment-blanic-2b8860349/" target="_blank" class="btn-social">LinkedIn</a>
+                    <a href="mailto:clementblanic@gmail.com" class="btn-social">clementblanic@gmail.com</a>
+                    <a href="CV de Clément Blanic.docx" target="_blank" class="btn-social">CV</a>
+                    <a href="assets/docs/lettre-motivation.pdf" target="_blank" class="btn-social">Lettre de Motivation</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="assets/img/profile.jpg" alt="Photo de profil" class="profile-pic">
+            </div>
+        </div>
+    </section>
+
+    <section id="formation" class="container">
+        <h2 class="section-title">Formation & Parcours</h2>
+        
+        <div class="formation-grid">
+            <div class="info-box">
+                <h3>🎓 Le BTS SIO</h3>
+                <p>Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations forme aux métiers de l'informatique. 
+                Je suis en option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).</p>
+                <br>
+                <a href="https://institutionsaintaspais.fr/campus/" target="_blank" class="link-text">Voir le Campus Saint Aspais →</a>
+                <br><a href="https://institutionsaintaspais.fr/formations/bts-services-informatiques-aux-organisations-option-slam-et-sisr/" target="_blank" class="link-text">Référentiel BTS SIO →</a>
+            </div>
+
+            <div class="info-box">
+                <h3>🚀 Mon Parcours</h3>
+                <ul class="timeline">
+                    <li>
+                        <strong>Janvier 2026 - Février 2026 :</strong> Stage de 2ème année - Enedis
+                        <br><a href="assets/docs/rapport-stage.pdf" target="_blank" class="link-text">Voir le rapport de stage</a>
+                    </li>
+                    <li>
+                        <strong>Mai 2025 - Juin 2025 :</strong> Stage de 1er année - Enedis
+                        <br><a href="assets/docs/rapport-stage.pdf" target="_blank" class="link-text">Voir le rapport de stage</a>
+                    </li>
+                    <li>
+                        <strong>2024 - Présent :</strong> BTS SIO - Campus Saint Aspais
+                    </li>
+                    <li>
+                        <strong>2022 - 2024 :</strong> BAC STI2D - Lycée Joliot Curie
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+
+<section id="competences" class="container">
+    <h2 class="section-title">Compétences Techniques</h2>
+    
+    <div class="tech-grid">
+        
+        <div class="tech-card">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML5</span>
+        </div>
+        
+        <div class="tech-card">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS3</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="devicon-php-plain colored"></i>
+            <span>PHP</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="devicon-symfony-original colored"></i>
+            <span>Symfony</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="devicon-debian-plain colored"></i>
+            <span>Debian</span>
+        </div>
+
+    </div>
+</section>
+
+    <section id="projets" class="container">
+        <h2 class="section-title">Projets & Procédures</h2>
+        
+        <div class="projects-grid">
+            <article class="project-card">
+                <h3>Site Vitrine Restaurant Campus</h3>
+                <p>Création d'un site de gestion de réservation pour le restaurant du campus.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span> <span class="tag">CSS</span> <span class="tag">PHP</span>
+                </div>
+                <a href="https://github.com/CTbien/RestoCampus" class="btn-small">Voir le code</a>
+            </article>
+
+            <article class="project-card">
+                <h3>API Meteo</h3>
+                <p>Application de récupération de données météo via API avec affichage dynamique.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span> <span class="tag">CSS</span> <span class="tag">JSON</span><span class="tag">PHP</span>
+                </div>
+                <a href="https://github.com/CTbien/API-Meteo" class="btn-small">Voir le code</a>
+            </article>
+
+            <article class="project-card procedure-card">
+                <h3>📝 Procédure : Déploiement GLPI</h3>
+                <p>Documentation technique sur l'installation d'un serveur GLPI sur Linux.</p>
+                <div class="tags">
+                    <span class="tag">Debian</span> <span class="tag">Réseau</span>
+                </div>
+                <a href="Procédure GLPI.pdf" target="_blank" class="btn-small">Lire le PDF</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="veille" class="container">
+    <h2 class="section-title">Veille Technologique</h2>
+
+    <div class="veille-intro">
+        <h3>📡 Sujet : L'impact de la 5G sur l'IoT</h3>
+        <p>
+            Ma veille se concentre sur l'apport de la 5G (faible latence, haut débit) 
+            dans le déploiement massif des objets connectés (IoT) : Industrie 4.0 et les voitures connectées.
+        </p>
+    </div>
+
+    <div class="articles-grid">
+        
+        <article class="article-card">
+            <span class="date">Février 2025</span>
+            <h4>5G Privée : Le choix de la Sécurité</h4>
+            <p>Pourquoi les entreprises investissent-elles massivement ? Cette étude révèle que la <strong>fiabilité</strong> et la <strong>sécurité des données</strong> sont les deux moteurs principaux face au Wi-Fi.</p>
+            <a href="https://www.zdnet.fr/actualites/voila-pourquoi-les-reseaux-5g-privatifs-interessent-deja-les-entreprises-39935757.htm" target="_blank" class="read-more">Lire l'étude →</a>
+        </article>
+
+        <article class="article-card">
+            <span class="date">Février 2025</span>
+            <h4>Record d'Europe : Usine 5G (Industrie 4.0)</h4>
+            <p>Alcatel Submarine Networks (Calais) déploie le plus grand réseau 5G privé d'Europe avec Free. Objectif : maintenance à distance et digitalisation des processus industriels.</p>
+            <a href="https://www.zdnet.fr/actualites/5g-privee-les-cinq-cas-d-usage-de-la-plus-grande-usine-connectee-d-europe-39951250.htm" target="_blank" class="read-more">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+            <span class="date">Janvier 2026</span> <h4>Auto : De l'outil à la cible</h4>
+            <p>Nos voitures sont devenues de véritables "ordinateurs roulants". Cet article analyse pourquoi leur cybersécurité est désormais un enjeu stratégique pour les flottes d'entreprises.</p>
+            
+            <a href="https://www.caradisiac.com/cybersecurite-des-automobiles-un-enjeu-de-plus-en-plus-strategique-pour-les-automobilistes-et-les-flottes-d-entreprises-219944.htm" target="_blank" class="read-more">Lire l'analyse →</a>
+        </article>
+    </div>
+
+    <div class="tools-container">
+        <h4>🛠️ Mes outils de veille :</h4>
+        <div class="tools-list">
+            <span class="tool-badge">Caradisiac</span>
+            <span class="tool-badge">ZD Net</span>
+        </div>
+    </div>
+
+</section>
+
+    <footer>
+        <p>&copy; 2026 - BLANIC Clément | BTS SIO</p>
+    </footer>
+</body>
+</html>
+</body>
